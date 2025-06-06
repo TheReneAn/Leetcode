@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Week1_ArrayHashing/1.0.0": {
+        "runtime": {
+          "Week1_ArrayHashing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week1_ArrayHashing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
