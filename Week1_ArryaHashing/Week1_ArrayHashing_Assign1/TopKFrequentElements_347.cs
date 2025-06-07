@@ -1,4 +1,25 @@
-﻿namespace Week1_ArrayHashing
+﻿/***************************************************************
+ * 🔷 LeetCode 347. Top K Frequent Elements                     
+ *                                                              
+ * 🟠 Difficulty: Medium                                        
+ *                                                              
+ * 📘 Problem:                                                  
+ *   Given an integer array `nums` and an integer `k`,          
+ *   return the `k` most frequent elements. You may return      
+ *   the answer in any order.                                   
+ *                                                              
+ * 📥 Example 1:                                                
+ *   Input:  nums = [1,1,1,2,2,3], k = 2                         
+ *   Output: [1,2]                                               
+ *                                                              
+ * 📥 Example 2:                                                
+ *   Input:  nums = [1], k = 1                                   
+ *   Output: [1]                                                
+ ***************************************************************/
+
+using System.Diagnostics;
+
+namespace Week1_ArrayHashing
 {
     class TopKFrequentElements_347
     {
@@ -11,18 +32,23 @@
             Console.WriteLine("[TopKFrequentElements_347]");
 
             // Answer_1
-            Console.WriteLine("Answer 1:");
-            var resultNum1 = Answer1_TopKFrequent(num1, 2); // Expected output: [1, 2]
-            var resultNum2 = Answer1_TopKFrequent(num2, 1); // Expected output: [1]
-            Console.WriteLine(string.Join(" ", resultNum1));
-            Console.WriteLine(string.Join(" ", resultNum2));
-            
+            MeasureExecutionTime(() => {
+                Console.WriteLine("Answer 1:");
+                var resultNum1 = Answer1_TopKFrequent(num1, 2); // Expected output: [1, 2]
+                var resultNum2 = Answer1_TopKFrequent(num2, 1); // Expected output: [1]
+                Console.WriteLine(string.Join(", ", resultNum1));
+                Console.WriteLine(string.Join(", ", resultNum2));
+            });
+
             // Answer_2
-            Console.WriteLine("Answer 2:");
-            var resultNum3 = Answer2_TopKFrequent(num1, 2);
-            var resultNum4 = Answer2_TopKFrequent(num2, 1);
-            Console.WriteLine(string.Join(" ", resultNum3));
-            Console.WriteLine(string.Join(" ", resultNum4));
+            MeasureExecutionTime(() =>
+            {
+                Console.WriteLine("Answer 2:");
+                var resultNum3 = Answer2_TopKFrequent(num1, 2);
+                var resultNum4 = Answer2_TopKFrequent(num2, 1);
+                Console.WriteLine(string.Join(", ", resultNum3));
+                Console.WriteLine(string.Join(", ", resultNum4));
+            });
         }
         
         /********** Method to find the k most frequent elements in the array **********/
@@ -93,6 +119,14 @@
             }
 
             return frequentElementList;
+        }
+
+		private static void MeasureExecutionTime(Action action)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            action();
+            stopwatch.Stop();
+            Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
         }
     }
 }
