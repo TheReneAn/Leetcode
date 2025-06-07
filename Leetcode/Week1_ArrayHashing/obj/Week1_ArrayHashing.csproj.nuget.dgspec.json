@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj": {}
+    "E:\\Programming\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj": {}
   },
   "projects": {
-    "E:\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj": {
+    "E:\\Programming\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj",
+        "projectUniqueName": "E:\\Programming\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj",
         "projectName": "Week1_ArrayHashing",
-        "projectPath": "E:\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj",
+        "projectPath": "E:\\Programming\\Leetcode\\Leetcode\\Week1_ArrayHashing\\Week1_ArrayHashing.csproj",
         "packagesPath": "C:\\Users\\ReneHOME\\.nuget\\packages\\",
-        "outputPath": "E:\\Leetcode\\Leetcode\\Week1_ArrayHashing\\obj\\",
+        "outputPath": "E:\\Programming\\Leetcode\\Leetcode\\Week1_ArrayHashing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

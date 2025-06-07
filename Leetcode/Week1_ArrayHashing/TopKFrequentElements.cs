@@ -8,15 +8,47 @@
             int[] num1 = [1, 1, 1, 2, 2, 3];
             int[] num2 = [1];
 
+            // Answer_1
+            Console.WriteLine("Answer 1:");
             var resultNum1 = Answer1_TopKFrequent(num1, 2); // Expected output: [1, 2]
             var resultNum2 = Answer1_TopKFrequent(num2, 1); // Expected output: [1]
-
-            // Print results
             Console.WriteLine(string.Join(" ", resultNum1));
             Console.WriteLine(string.Join(" ", resultNum2));
+            
+            // Answer_2
+            Console.WriteLine("Answer 2:");
+            var resultNum3 = Answer2_TopKFrequent(num1, 2);
+            var resultNum4 = Answer2_TopKFrequent(num2, 1);
+            Console.WriteLine(string.Join(" ", resultNum3));
+            Console.WriteLine(string.Join(" ", resultNum4));
         }
         
-        // Method to find the k most frequent elements in the array
+        /********** Method to find the k most frequent elements in the array **********/
+        static int[] Answer2_TopKFrequent(int[] nums, int k)
+        {
+            // Count frequencies
+            var countMap = new Dictionary<int, int>();
+            foreach (var num in nums)
+                countMap[num] = countMap.GetValueOrDefault(num, 0) + 1;
+
+            // Min-Heap to keep top k elements
+            var minHeap = new PriorityQueue<int, int>(); // element = num, priority = frequency
+
+            foreach (var entry in countMap)
+            {
+                minHeap.Enqueue(entry.Key, entry.Value); // frequency as priority
+                if (minHeap.Count > k)
+                    minHeap.Dequeue(); // remove smallest frequency
+            }
+
+            // Extract result
+            var result = new int[k];
+            for (int i = k - 1; i >= 0; i--)
+                result[i] = minHeap.Dequeue();
+
+            return result;
+        }
+        
         static int[] Answer1_TopKFrequent(int[] nums, int k)
         {
             // Dictionary to count the frequency of each element
@@ -41,7 +73,7 @@
             for (var i = 0; i < k; i++)
             {
                 int maxKey = default;
-                int maxCount = -1;
+                var maxCount = -1;
 
                 // Find the element with the highest frequency
                 foreach (var pair in frequentCountList)
