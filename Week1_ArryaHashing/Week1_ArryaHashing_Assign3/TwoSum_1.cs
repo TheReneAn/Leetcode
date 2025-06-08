@@ -119,3 +119,29 @@ namespace Week1_ArrayHashing
         }
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 1. Two Sum
+ *
+ * 1️⃣ What is the time and space complexity?
+ *     → Time: O(n), Space: O(n) — We use a single pass with a hash map.
+ *
+ * 2️⃣ Why use a hash map?
+ *     → To check if the complement exists in constant time (O(1)).
+ *        It allows us to avoid nested loops and improves efficiency.
+ *
+ * 3️⃣ What if the array is sorted?
+ *     → Use the two-pointer approach: start from both ends and move inward
+ *        depending on the current sum compared to the target.
+ *
+ * 4️⃣ What if there are multiple correct pairs?
+ *     → This problem assumes exactly one solution. If multiple are allowed,
+ *        we would collect all valid index pairs in a list.
+ *
+ * 5️⃣ What edge cases should be considered?
+ *     → Same element used twice (e.g., [3,3]), negative numbers, duplicates,
+ *        empty or very large arrays.
+ *
+ * 6️⃣ Why is `map[nums[i]] = i` placed after checking the complement?
+ *     → To avoid using the same element twice (e.g., matching a number with itself).
+ ***************************************************************/

@@ -140,3 +140,27 @@ namespace Week1_ArrayHashing
         }
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 347. Top K Frequent Elements
+ *
+ * 1️⃣ What is the time and space complexity?
+ *     → Time: O(n log k), where n is the number of elements and k is the number of results.
+ *     → Space: O(n) for frequency map and heap.
+ *
+ * 2️⃣ Why use a min-heap instead of sorting?
+ *     → Sorting takes O(n log n), but a heap lets us maintain only the top k elements,
+ *        making the solution more efficient for large datasets.
+ *
+ * 3️⃣ Why is `if (heap.Count > k)` necessary?
+ *     → To ensure that the heap only stores the k most frequent elements.
+ *        We remove the least frequent one when we exceed k.
+ *
+ * 4️⃣ Can we use a max-heap instead?
+ *     → Yes, but we would need to reverse the frequency comparison or use a custom comparator.
+ *        In C#, min-heap is default so we use frequency as the priority directly.
+ *
+ * 5️⃣ What edge cases should we consider?
+ *     → When all elements are unique, or when all elements are the same.
+ *        Also, k == 1 or k == nums.Length.
+ ***************************************************************/

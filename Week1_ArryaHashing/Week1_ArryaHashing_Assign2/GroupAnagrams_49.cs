@@ -148,3 +148,25 @@ namespace Week1_ArrayHashing
         }
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 49. Group Anagrams
+ *
+ * 1️⃣ What is the time and space complexity?
+ *     → Time: O(n * k log k), where n is the number of words and k is the average word length.
+ *     → Space: O(n) for the hash map storing groups.
+ *
+ * 2️⃣ Why use the sorted string as a key?
+ *     → Anagrams become the same string after sorting,
+ *        so it’s a reliable way to group them efficiently.
+ *
+ * 3️⃣ Can we solve this without sorting the strings?
+ *     → Yes, we can use a character frequency array (e.g., 26-length int array as key)
+ *        instead of sorting — more optimal for longer strings.
+ *
+ * 4️⃣ What edge cases should we consider?
+ *     → Empty string input, single-letter strings, or all strings being anagrams of each other.
+ *
+ * 5️⃣ Does the order of groups or words inside groups matter?
+ *     → No. The problem states the answer can be in any order.
+ ***************************************************************/
