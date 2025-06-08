@@ -65,22 +65,24 @@ namespace Week1_ArrayHashing
 
         static IList<IList<string>> Answer2_GroupAnagrams(string[] strs)
         {
+            // Dictionary to group words by their sorted character key
             var map = new Dictionary<string, List<string>>();
 
             foreach (var str in strs)
             {
                 // Sort the string to use as key
-                var chars = str.ToCharArray();
-                Array.Sort(chars);
-                var key = new string(chars);
+                var charArray = str.ToCharArray(); // e.g., "eat" -> "aet"
+                Array.Sort(charArray);
+                var sorted = new string(charArray);
 
-                // TryGetValue is slightly faster and cleaner than ContainsKey
-                if (map.TryGetValue(key, out var group) == false)
+                // Group words by sorted string
+                if (map.TryGetValue(sorted, out var group) == false)
                 {
                     group = new List<string>();
-                    map[key] = group;
+                    map[sorted] = group;
                 }
 
+                // Add the word to its corresponding group
                 group.Add(str);
             }
 
@@ -96,22 +98,25 @@ namespace Week1_ArrayHashing
 
         static IList<IList<string>> Answer1_GroupAnagrams(string[] strs) 
         {
+            // Dictionary to group words by their sorted character key
             var map = new Dictionary<string, List<string>>();
 
-            foreach (var word in strs)
+            foreach (var str in strs)
             {
                 // Sort the string to use as key
-                var charArray  = word.ToCharArray();
+                var charArray  = str.ToCharArray();
                 Array.Sort(charArray);
                 var sorted = new string(charArray); // e.g., "eat" → "aet"
 
                 // Group words by sorted string
                 if (map.ContainsKey(sorted) == false)
                 {
+                    // If not found, create a new group and add it to the dictionary
                     map[sorted] = new List<string>();
                 }
 
-                map[sorted].Add(word);
+                // Add the word to its corresponding group
+                map[sorted].Add(str);
             }
 
             // Convert Dictionary values to List<IList<string>>
