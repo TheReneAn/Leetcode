@@ -52,28 +52,38 @@ namespace Week1_ArrayHashing
         }
         
         /********** Method to find the k most frequent elements in the array **********/
-        static int[] Answer2_TopKFrequent(int[] nums, int k)
+        private static int[] Answer2_TopKFrequent(int[] nums, int k)
         {
-            // Count frequencies
+            // Dictionary to count the frequency of each number
             var countMap = new Dictionary<int, int>();
             foreach (var num in nums)
+            {
                 countMap[num] = countMap.GetValueOrDefault(num, 0) + 1;
+            }
 
-            // Min-Heap to keep top k elements
-            var minHeap = new PriorityQueue<int, int>(); // element = num, priority = frequency
+            // Min-Heap to keep track of the top k frequent elements
+            var minHeap = new PriorityQueue<int, int>(); // element = number, priority = frequency
 
             foreach (var entry in countMap)
             {
-                minHeap.Enqueue(entry.Key, entry.Value); // frequency as priority
+                // Add the number with its frequency as priority
+                minHeap.Enqueue(entry.Key, entry.Value);
+
+                // If the heap exceeds size k, remove the element with the smallest frequency
                 if (minHeap.Count > k)
-                    minHeap.Dequeue(); // remove smallest frequency
+                {
+                    minHeap.Dequeue();
+                }
             }
 
-            // Extract result
+            // Extract the top k elements from the heap and store them in the result array
             var result = new int[k];
             for (var i = k - 1; i >= 0; i--)
+            {
                 result[i] = minHeap.Dequeue();
+            }
 
+            // Return the top k frequent elements
             return result;
         }
         

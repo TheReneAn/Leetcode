@@ -27,7 +27,7 @@
  *   Output: [0,1]                                               
  ***************************************************************/
 
-sing System.Diagnostics;
+using System.Diagnostics;
 
 namespace Week1_ArrayHashing
 {
