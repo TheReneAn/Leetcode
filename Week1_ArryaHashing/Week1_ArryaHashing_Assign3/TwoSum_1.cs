@@ -120,7 +120,7 @@ namespace Week1_ArrayHashing
     }
 }
 
-/***************************************************************
+/******************************************************asmr microphone*********
  * 🔎 Interview Questions for LeetCode 1. Two Sum
  *
  * 1️⃣ What is the time and space complexity?
@@ -135,8 +135,7 @@ namespace Week1_ArrayHashing
  *        depending on the current sum compared to the target.
  *
  * 4️⃣ What if there are multiple correct pairs?
- *     → This problem assumes exactly one solution. If multiple are allowed,
- *        we would collect all valid index pairs in a list.
+ *     → If multiple are allowed, we would collect all valid index pairs in a list.
  *
  * 5️⃣ What edge cases should be considered?
  *     → Same element used twice (e.g., [3,3]), negative numbers, duplicates,
