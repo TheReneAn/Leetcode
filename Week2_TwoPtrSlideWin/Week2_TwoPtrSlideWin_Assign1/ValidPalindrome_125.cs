@@ -58,6 +58,15 @@ class ValidPalindrome_125
         });
     }
     
+    /// <summary>
+    /// This solution uses the Two Pointers technique to check whether a string is a valid palindrome.
+    /// We initialize two pointers at the beginning and end of the string, and move them inward.
+    /// While moving, we skip non-alphanumeric characters and compare the lowercase values of each character.
+    /// If all valid characters match symmetrically, the string is a palindrome.
+    /// This approach runs in O(n) time and uses O(1) additional space.
+    /// </summary>
+    /// <param name="s"></param>
+    /// <returns></returns>
     private static bool IsPalindrome(string s)
     {
         var left = 0;
@@ -98,3 +107,29 @@ class ValidPalindrome_125
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 125. Valid Palindrome
+ *
+ * 1️⃣ What is a palindrome?
+ *     → A string that reads the same forward and backward.
+ *
+ * 2️⃣ Why did you use the two pointers technique?
+ *     → It allows efficient comparison from both ends with O(n) time
+ *        and avoids creating a new string, saving space.
+ *
+ * 3️⃣ How do you handle case sensitivity and non-alphanumeric characters?
+ *     → Convert characters to lowercase using `char.ToLower`,
+ *        and skip non-alphanumeric using `char.IsLetterOrDigit`.
+ *
+ * 4️⃣ What happens if the string only contains spaces or symbols?
+ *     → All such characters are skipped; the string becomes empty,
+ *        which is considered a valid palindrome.
+ *
+ * 5️⃣ What is the time and space complexity?
+ *     → Time: O(n), Space: O(1) if using two pointers directly.
+ *
+ * 6️⃣ Could you solve this in another way?
+ *     → Yes, by filtering the string using regex or a `StringBuilder`,
+ *        then comparing it to its reverse — but this uses O(n) space.
+ ***************************************************************/
