@@ -72,7 +72,7 @@ namespace Week1_ArrayHashing
             // Iterate through the array once
             for (var i = 0; i < nums.Length; i++)
             {
-                // Calculate the value needed to reach the target (the complement)
+                // Calculate the value needed to reach complement
                 var complement = target - nums[i];
 
                 // Check if the complement is already in the map
@@ -83,11 +83,10 @@ namespace Week1_ArrayHashing
                 }
 
                 // Otherwise, store the current number and its index in the map
-                // so we can use it later if needed
                 map[nums[i]] = i;
             }
 
-            // If no solution is found, return an empty array (shouldn't happen in LeetCode)
+            // If no solution is found, return an empty array
             return [];
         }
 
@@ -120,7 +119,7 @@ namespace Week1_ArrayHashing
     }
 }
 
-/******************************************************asmr microphone*********
+/***************************************************************
  * 🔎 Interview Questions for LeetCode 1. Two Sum
  *
  * 1️⃣ What is the time and space complexity?
