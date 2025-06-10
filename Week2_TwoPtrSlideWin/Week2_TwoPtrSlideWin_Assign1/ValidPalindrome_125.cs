@@ -37,7 +37,57 @@ class ValidPalindrome_125
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine("[ValidPalindrome_125]");
+
+        string[] testCases = {
+            "A man, a plan, a canal: Panama",  // true
+            "race a car",                      // false
+            " ",                               // true
+            "No 'x' in Nixon",                 // true
+            "Was it a car or a cat I saw?"     // true
+        };
+
+        MeasureExecutionTime(() =>
+        {
+            for (var i = 0; i < testCases.Length; i++)
+            {
+                var input = testCases[i];
+                var result = IsPalindrome(input);
+                Console.WriteLine($"Test Case {i + 1}: \"{input}\" → {result}");
+            }
+        });
+    }
+    
+    private static bool IsPalindrome(string s)
+    {
+        var left = 0;
+        var right = s.Length - 1;
+
+        while (left < right)
+        {
+            // Skip non-alphanumeric characters on the left
+            while (left < right && char.IsLetterOrDigit(s[left]) == false)
+            {
+                left++;
+            }
+
+            // Skip non-alphanumeric characters on the right
+            while (left < right && char.IsLetterOrDigit(s[right]) == false)
+            {
+                right--;
+            }
+
+            // Compare characters after converting to lowercase
+            if (char.ToLower(s[left]) != char.ToLower(s[right]))
+            {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
     }
     
     private static void MeasureExecutionTime(Action action)

@@ -91,7 +91,7 @@ namespace Week1_ArrayHashing
             return [];
         }
 
-        private static int[] Answer1_TwoSum(int[] nums, int target) 
+        private static int[] Answer1_TwoSum(int[] nums, int target)
         {
             var result = new int[2];
             
