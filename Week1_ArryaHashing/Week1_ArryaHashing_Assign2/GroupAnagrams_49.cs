@@ -22,130 +22,132 @@
  * 📥 Example 3:
  *   Input:  ["a"]
  *   Output: [["a"]]
+ * 
+ * 🚩 Topic:
+ *	 Array, Hash Table, String, Sorting
  ***************************************************************/
 
 using System.Diagnostics;
 
-namespace Week1_ArrayHashing
+namespace Week1_ArrayHashing;
+
+public class GroupAnagrams_49
 {
-    class GroupAnagrams_49
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var strs1 = new[] { "eat", "tea", "tan", "ate", "nat", "bat" };
-            var strs2 = new[] { " " };
-            var strs3 = new[] { "a" };
+        var strs1 = new[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+        var strs2 = new[] { " " };
+        var strs3 = new[] { "a" };
 
-            Console.WriteLine("[GroupAnagrams_49]");
+        Console.WriteLine("[GroupAnagrams_49]");
             
-            // Answer_1
-            Console.WriteLine("Answer 1:");
-            MeasureExecutionTime(() =>
-            {
-                var resultAnswer1 = Answer1_GroupAnagrams(strs1);
-                var resultAnswer2 = Answer1_GroupAnagrams(strs2);
-                var resultAnswer3 = Answer1_GroupAnagrams(strs3);
-                PrintResult(resultAnswer1);
-                PrintResult(resultAnswer2);
-                PrintResult(resultAnswer3);
-            });
-
-            // Answer_2
-            Console.WriteLine("Answer 2:");
-            MeasureExecutionTime(() =>
-            {
-                var resultAnswer1 = Answer2_GroupAnagrams(strs1);
-                var resultAnswer2 = Answer2_GroupAnagrams(strs2);
-                var resultAnswer3 = Answer2_GroupAnagrams(strs3);
-                PrintResult(resultAnswer1);
-                PrintResult(resultAnswer2);
-                PrintResult(resultAnswer3);
-            });
-        }
-
-        static IList<IList<string>> Answer2_GroupAnagrams(string[] strs)
+        // Answer_1
+        Console.WriteLine("Answer 1:");
+        MeasureExecutionTime(() =>
         {
-            // Dictionary to group words by their sorted character key
-            var map = new Dictionary<string, List<string>>();
+            var resultAnswer1 = Answer1_GroupAnagrams(strs1);
+            var resultAnswer2 = Answer1_GroupAnagrams(strs2);
+            var resultAnswer3 = Answer1_GroupAnagrams(strs3);
+            PrintResult(resultAnswer1);
+            PrintResult(resultAnswer2);
+            PrintResult(resultAnswer3);
+        });
 
-            foreach (var str in strs)
-            {
-                // Sort the string to use as key
-                var charArray = str.ToCharArray(); // e.g., "eat" -> "aet"
-                Array.Sort(charArray);
-                var sorted = new string(charArray);
-
-                // Group words by sorted string
-                if (map.TryGetValue(sorted, out var group) == false)
-                {
-                    group = new List<string>();
-                    map[sorted] = group;
-                }
-
-                // Add the word to its corresponding group
-                group.Add(str);
-            }
-
-            // Convert Dictionary values to List<IList<string>>
-            var result = new List<IList<string>>();
-            foreach (var group in map.Values)
-            {
-                result.Add(group);
-            }
-
-            return result;
-        }
-
-        static IList<IList<string>> Answer1_GroupAnagrams(string[] strs) 
+        // Answer_2
+        Console.WriteLine("Answer 2:");
+        MeasureExecutionTime(() =>
         {
-            // Dictionary to group words by their sorted character key
-            var map = new Dictionary<string, List<string>>();
+            var resultAnswer1 = Answer2_GroupAnagrams(strs1);
+            var resultAnswer2 = Answer2_GroupAnagrams(strs2);
+            var resultAnswer3 = Answer2_GroupAnagrams(strs3);
+            PrintResult(resultAnswer1);
+            PrintResult(resultAnswer2);
+            PrintResult(resultAnswer3);
+        });
+    }
 
-            foreach (var str in strs)
+    static IList<IList<string>> Answer2_GroupAnagrams(string[] strs)
+    {
+        // Dictionary to group words by their sorted character key
+        var map = new Dictionary<string, List<string>>();
+
+        foreach (var str in strs)
+        {
+            // Sort the string to use as key
+            var charArray = str.ToCharArray(); // e.g., "eat" -> "aet"
+            Array.Sort(charArray);
+            var sorted = new string(charArray);
+
+            // Group words by sorted string
+            if (map.TryGetValue(sorted, out var group) == false)
             {
-                // Sort the string to use as key
-                var charArray  = str.ToCharArray();
-                Array.Sort(charArray);
-                var sorted = new string(charArray); // e.g., "eat" → "aet"
-
-                // Group words by sorted string
-                if (map.ContainsKey(sorted) == false)
-                {
-                    // If not found, create a new group and add it to the dictionary
-                    map[sorted] = new List<string>();
-                }
-
-                // Add the word to its corresponding group
-                map[sorted].Add(str);
+                group = new List<string>();
+                map[sorted] = group;
             }
 
-            // Convert Dictionary values to List<IList<string>>
-            var result = new List<IList<string>>();
-            foreach (var group in map.Values)
-            {
-                result.Add(group);
-            }
-
-            return result;
+            // Add the word to its corresponding group
+            group.Add(str);
         }
+
+        // Convert Dictionary values to List<IList<string>>
+        var result = new List<IList<string>>();
+        foreach (var group in map.Values)
+        {
+            result.Add(group);
+        }
+
+        return result;
+    }
+
+    static IList<IList<string>> Answer1_GroupAnagrams(string[] strs) 
+    {
+        // Dictionary to group words by their sorted character key
+        var map = new Dictionary<string, List<string>>();
+
+        foreach (var str in strs)
+        {
+            // Sort the string to use as key
+            var charArray  = str.ToCharArray();
+            Array.Sort(charArray);
+            var sorted = new string(charArray); // e.g., "eat" → "aet"
+
+            // Group words by sorted string
+            if (map.ContainsKey(sorted) == false)
+            {
+                // If not found, create a new group and add it to the dictionary
+                map[sorted] = new List<string>();
+            }
+
+            // Add the word to its corresponding group
+            map[sorted].Add(str);
+        }
+
+        // Convert Dictionary values to List<IList<string>>
+        var result = new List<IList<string>>();
+        foreach (var group in map.Values)
+        {
+            result.Add(group);
+        }
+
+        return result;
+    }
         
-        private static void PrintResult(IList<IList<string>> groups)
+    private static void PrintResult(IList<IList<string>> groups)
+    {
+        foreach (var group in groups)
         {
-            foreach (var group in groups)
-            {
-                Console.Write("[");
-                Console.Write(string.Join(", ", group));
-                Console.WriteLine("]");
-            }
+            Console.Write("[");
+            Console.Write(string.Join(", ", group));
+            Console.WriteLine("]");
         }
+    }
         
-        private static void MeasureExecutionTime(Action action)
-        {
-            var stopwatch = Stopwatch.StartNew();
-            action();
-            stopwatch.Stop();
-            Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
-        }
+    private static void MeasureExecutionTime(Action action)
+    {
+        var stopwatch = Stopwatch.StartNew();
+        action();
+        stopwatch.Stop();
+        Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
 

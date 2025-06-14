@@ -27,13 +27,16 @@
  *   Input:  s = " "
  *   Output: true
  *   Explanation: An empty string is considered a palindrome.
+ * 
+ * 🚩 Topic:
+ *	 Two Pointers, String
  ***************************************************************/
 
 using System.Diagnostics;
 
 namespace Week2_TwoPtrSlideWin;
 
-class ValidPalindrome_125
+public class ValidPalindrome_125
 {
     static void Main(string[] args)
     {

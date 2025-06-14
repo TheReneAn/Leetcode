@@ -23,13 +23,16 @@
  *   Explanation: Replace the middle 'A' with 'B',              
  *                result: "AABBBBA" → "BBBB" has length 4.      
  *                Other valid transformations may exist.        
+ * 
+ * 🚩 Topic:
+ *	 Hash Table, String, Sliding Window
  ***************************************************************/
 
 using System.Diagnostics;
 
-namespace Week2_TwoPtrSlideWin_Assign3;
+namespace Week2_TwoPtrSlideWin;
 
-class LongestRepeatingCharacterReplacement_424
+public class LongestRepeatingCharacterReplacement_424
 {
     static void Main(string[] args)
     {

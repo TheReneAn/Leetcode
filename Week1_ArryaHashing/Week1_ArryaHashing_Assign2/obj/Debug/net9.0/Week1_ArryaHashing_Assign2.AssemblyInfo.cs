@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Week1_ArryaHashing_Assign2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a45abfd0ba546265aee8425a5d1d50590ecc4b68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c9a8b54051c6f4744ae92fe7c74b04ad979919b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Week1_ArryaHashing_Assign2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Week1_ArryaHashing_Assign2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
