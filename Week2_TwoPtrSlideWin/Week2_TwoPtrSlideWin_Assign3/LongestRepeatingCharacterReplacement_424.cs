@@ -36,9 +36,60 @@ public class LongestRepeatingCharacterReplacement_424
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        const string testCase1 = "ABAB";
+        const string testCase2 = "AABABBA";
+        
+        MeasureExecutionTime(() =>
+        {
+            var resultTestCase1 = CharacterReplacement(testCase1, 2);
+            Console.WriteLine($"TestCase1 {testCase1} Output: {resultTestCase1}");
+        });
+        
+        var resultTestCase2 = CharacterReplacement(testCase2, 1);
+        Console.WriteLine($"TestCase1 {testCase2} Output: {resultTestCase2}");
     }
-    
+
+    private static int CharacterReplacement(string s, int k)
+    {
+        // Dictionary to track the frequency of each character in the current sliding window
+        var charCounts = new Dictionary<char, int>();
+
+        var windowStart = 0;           // Left boundary of the sliding window
+        var maxLength = 0;      // Length of the longest valid substring found
+        var maxCount = 0;       // Highest frequency of any single character in the window
+
+        // Expand the sliding window by moving the right boundary
+        for (var i = 0; i < s.Length; i++)
+        {
+            var currentChar = s[i];
+
+            // Increment the frequency count for the current character
+            if (charCounts.ContainsKey(currentChar) == false)
+            {
+                charCounts[currentChar] = 0;    // Initialize if not present
+            }
+            charCounts[currentChar]++;
+
+            // Update the count of the most frequent character in the current window
+            maxCount = Math.Max(maxCount, charCounts[currentChar]);
+
+            // If the remaining characters (that are not the most frequent one) exceed k,
+            // shrink the window from the left
+            while (i - windowStart + 1 - maxCount > k)
+            {
+                var leftChar = s[windowStart];
+                charCounts[leftChar]--;
+                windowStart++;
+            }
+
+            // Update the maximum length of a valid window found so far
+            var windowLength = i - windowStart + 1;
+            maxLength = Math.Max(maxLength, windowLength);
+        }
+
+        return maxLength;
+    }
+
     private static void MeasureExecutionTime(Action action)
     {
         var stopwatch = Stopwatch.StartNew();

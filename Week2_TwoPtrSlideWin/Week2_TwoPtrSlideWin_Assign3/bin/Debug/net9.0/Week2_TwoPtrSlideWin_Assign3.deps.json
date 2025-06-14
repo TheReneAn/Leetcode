@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Week2_TwoPtrSlideWin_Assign3/1.0.0": {
+        "runtime": {
+          "Week2_TwoPtrSlideWin_Assign3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week2_TwoPtrSlideWin_Assign3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
