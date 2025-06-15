@@ -30,7 +30,7 @@
 
 using System.Diagnostics;
 
-namespace Week2_TwoPtrSlideWin;
+namespace Week2_TwoPtrSlideWin_Assign3;
 
 public class LongestRepeatingCharacterReplacement_424
 {

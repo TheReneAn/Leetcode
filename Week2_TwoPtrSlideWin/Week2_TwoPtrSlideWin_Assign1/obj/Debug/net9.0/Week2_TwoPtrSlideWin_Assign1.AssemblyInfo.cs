@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Week2_TwoPtrSlideWin_Assign1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0ac7f93cfdeb8c434089da9196c73531f6e4a55")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38132c4ee0a65e3e18e921cecd6a53af2ff68d78")]
 [assembly: System.Reflection.AssemblyProductAttribute("Week2_TwoPtrSlideWin_Assign1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Week2_TwoPtrSlideWin_Assign1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

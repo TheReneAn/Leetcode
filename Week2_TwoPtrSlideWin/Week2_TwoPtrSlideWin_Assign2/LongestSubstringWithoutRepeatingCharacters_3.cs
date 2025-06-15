@@ -33,7 +33,7 @@
 
 using System.Diagnostics;
 
-namespace Week2_TwoPtrSlideWin;
+namespace Week2_TwoPtrSlideWin_Assign2;
 
 public class LongestSubstringWithoutRepeatingCharacters_3
 {
