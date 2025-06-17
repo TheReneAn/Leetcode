@@ -4,3 +4,9 @@
 /Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign1/bin/Debug/Week3_Stack_Assign1.pdb
 /Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign1/obj/Debug/Week3_Stack_Assign1.exe
 /Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign1/obj/Debug/Week3_Stack_Assign1.pdb
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\bin\Debug\Week3_Stack_Assign1.exe
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\bin\Debug\Week3_Stack_Assign1.pdb
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\obj\Debug\Week3_Stack_Assign1.csproj.AssemblyReference.cache
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\obj\Debug\Week3_Stack_Assign1.csproj.CoreCompileInputs.cache
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\obj\Debug\Week3_Stack_Assign1.exe
+C:\Users\tunce\Desktop\Leetcode\Week3_Stack\Week3_Stack_Assign1\obj\Debug\Week3_Stack_Assign1.pdb

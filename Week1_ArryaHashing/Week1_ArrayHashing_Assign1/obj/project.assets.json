@@ -8,32 +8,29 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ReneHOME\\.nuget\\packages\\": {},
+    "C:\\Users\\tunce\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Programming\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\Week1_ArrayHashing_Assign1.csproj",
+      "projectUniqueName": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\Week1_ArrayHashing_Assign1.csproj",
       "projectName": "Week1_ArrayHashing_Assign1",
-      "projectPath": "E:\\Programming\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\Week1_ArrayHashing_Assign1.csproj",
-      "packagesPath": "C:\\Users\\ReneHOME\\.nuget\\packages\\",
-      "outputPath": "E:\\Programming\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\obj\\",
+      "projectPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\Week1_ArrayHashing_Assign1.csproj",
+      "packagesPath": "C:\\Users\\tunce\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week1_ArryaHashing\\Week1_ArrayHashing_Assign1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ReneHOME\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\tunce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -73,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\tunce\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
