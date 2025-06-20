@@ -1,0 +1,15 @@
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/bin/Debug/net9.0/Week3_Stack_Assign3
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/bin/Debug/net9.0/Week3_Stack_Assign3.deps.json
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/bin/Debug/net9.0/Week3_Stack_Assign3.runtimeconfig.json
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/bin/Debug/net9.0/Week3_Stack_Assign3.dll
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/bin/Debug/net9.0/Week3_Stack_Assign3.pdb
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.AssemblyInfoInputs.cache
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.AssemblyInfo.cs
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.csproj.CoreCompileInputs.cache
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.sourcelink.json
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.dll
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/refint/Week3_Stack_Assign3.dll
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.pdb
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/Week3_Stack_Assign3.genruntimeconfig.cache
+/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/Debug/net9.0/ref/Week3_Stack_Assign3.dll

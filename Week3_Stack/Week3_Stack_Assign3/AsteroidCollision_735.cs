@@ -50,10 +50,78 @@ class AsteroidCollision_735
 {
     static void Main(string[] args)
     {
+        int[] steroidsCase1 = [5, 10, -5];
+        int[] steroidsCase2 = [8, -8];
+        int[] steroidsCase3 = [10, 2, -5];
+        
         MeasureExecutionTime(() =>
         {
-            
+            var result1 = AsteroidCollision(steroidsCase1);
+            Console.WriteLine($"Output: [{string.Join(", ", result1)}]");
         });
+        
+        var result2 = AsteroidCollision(steroidsCase2);
+        Console.WriteLine($"Output: [{string.Join(", ", result2)}]");
+        
+        var result3 = AsteroidCollision(steroidsCase3);
+        Console.WriteLine($"Output: [{string.Join(", ", result3)}]");
+    }
+    
+    /// <summary>
+    /// Returns the state of the asteroids after all collisions.
+    /// </summary>
+    /// <param name="asteroids">An array of integers representing asteroids.</param>
+    /// <returns>The state of the asteroids after all collisions.</returns>
+    private static int[] AsteroidCollision(int[] asteroids)
+    {
+        var stack = new Stack<int>();
+
+        foreach (var currentAsteroid in asteroids)
+        {
+            // Flag to track if the current asteroid survives the collisions.
+            var survived = true;
+
+            // Collision condition: Stack is not empty, current asteroid is moving left (-), 
+            // and the asteroid at the top of the stack is moving right (+).
+            while (stack.Count > 0 && currentAsteroid < 0 && stack.Peek() > 0)
+            {
+                // The asteroid at the top of the stack.
+                var lastAsteroid = stack.Peek();
+
+                if (Math.Abs(currentAsteroid) > lastAsteroid)
+                {
+                    // Current asteroid is bigger, so the one on the stack explodes.
+                    stack.Pop();
+                    // The current asteroid survives, so it continues to check against the next asteroid on the stack.
+                    continue; 
+                }
+                
+                if (Math.Abs(currentAsteroid) == lastAsteroid)
+                {
+                    // If sizes are equal, both explode.
+                    stack.Pop();
+                    survived = false; // The current asteroid is also destroyed.
+                }
+                else // Math.Abs(currentAsteroid) < lastAsteroid
+                {
+                    // The asteroid on the stack is bigger, so the current asteroid is destroyed.
+                    survived = false;
+                }
+                
+                // If the current asteroid was destroyed, no need to check for more collisions.
+                break;
+            }
+
+            // If the current asteroid survived all collisions, push it onto the stack.
+            if (survived)
+            {
+                stack.Push(currentAsteroid);
+            }
+        }
+
+        // The stack holds the result in reverse order, so we need to reverse it to get the correct final state.
+        // e.g., Stack: [bottom -> 5, 10 -> top] becomes Array [10, 5]. After reversing, it becomes [5, 10].
+        return stack.Reverse().ToArray();
     }
     
     private static void MeasureExecutionTime(Action action)
