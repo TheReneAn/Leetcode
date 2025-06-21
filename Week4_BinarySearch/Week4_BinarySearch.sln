@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4_BinarySearch_Assign1", "Week4_BinarySearch_Assign1\Week4_BinarySearch_Assign1.csproj", "{9AACA381-2215-4EDE-990F-6EAC4D6F8127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4_BinarySearch_Assign2", "Week4_BinarySearch_Assign2\Week4_BinarySearch_Assign2.csproj", "{00392FDB-6191-492A-8E21-D73B6B6B2B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4_BinarySearch_Assign3", "Week4_BinarySearch_Assign3\Week4_BinarySearch_Assign3.csproj", "{51461B63-0E10-46C5-AB6E-81A2E97AD4BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AACA381-2215-4EDE-990F-6EAC4D6F8127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AACA381-2215-4EDE-990F-6EAC4D6F8127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AACA381-2215-4EDE-990F-6EAC4D6F8127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AACA381-2215-4EDE-990F-6EAC4D6F8127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00392FDB-6191-492A-8E21-D73B6B6B2B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00392FDB-6191-492A-8E21-D73B6B6B2B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00392FDB-6191-492A-8E21-D73B6B6B2B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00392FDB-6191-492A-8E21-D73B6B6B2B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51461B63-0E10-46C5-AB6E-81A2E97AD4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51461B63-0E10-46C5-AB6E-81A2E97AD4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51461B63-0E10-46C5-AB6E-81A2E97AD4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51461B63-0E10-46C5-AB6E-81A2E97AD4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
