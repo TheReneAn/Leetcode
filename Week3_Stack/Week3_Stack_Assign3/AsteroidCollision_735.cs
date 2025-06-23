@@ -78,49 +78,37 @@ class AsteroidCollision_735
 
         foreach (var currentAsteroid in asteroids)
         {
-            // Flag to track if the current asteroid survives the collisions.
             var survived = true;
 
-            // Collision condition: Stack is not empty, current asteroid is moving left (-), 
-            // and the asteroid at the top of the stack is moving right (+).
             while (stack.Count > 0 && currentAsteroid < 0 && stack.Peek() > 0)
             {
-                // The asteroid at the top of the stack.
                 var lastAsteroid = stack.Peek();
+                var currentSize = Math.Abs(currentAsteroid);
 
-                if (Math.Abs(currentAsteroid) > lastAsteroid)
+                if (currentSize > lastAsteroid)
                 {
-                    // Current asteroid is bigger, so the one on the stack explodes.
+                    stack.Pop(); // The asteroid on the stack explodes
+                    continue;    // The current asteroid keeps moving and checks for more collisions
+                }
+
+                survived = false; // The current asteroid is destroyed
+
+                // If both asteroids are the same size, both are destroyed
+                if (currentSize == lastAsteroid)
+                {
                     stack.Pop();
-                    // The current asteroid survives, so it continues to check against the next asteroid on the stack.
-                    continue; 
                 }
-                
-                if (Math.Abs(currentAsteroid) == lastAsteroid)
-                {
-                    // If sizes are equal, both explode.
-                    stack.Pop();
-                    survived = false; // The current asteroid is also destroyed.
-                }
-                else // Math.Abs(currentAsteroid) < lastAsteroid
-                {
-                    // The asteroid on the stack is bigger, so the current asteroid is destroyed.
-                    survived = false;
-                }
-                
-                // If the current asteroid was destroyed, no need to check for more collisions.
-                break;
+                break; // No need to check for further collisions
             }
 
-            // If the current asteroid survived all collisions, push it onto the stack.
+            // If the current asteroid survived all collisions, add it to the stack
             if (survived)
             {
                 stack.Push(currentAsteroid);
             }
         }
 
-        // The stack holds the result in reverse order, so we need to reverse it to get the correct final state.
-        // e.g., Stack: [bottom -> 5, 10 -> top] becomes Array [10, 5]. After reversing, it becomes [5, 10].
+        // The stack contains the result in reverse order, so reverse it before returning
         return stack.Reverse().ToArray();
     }
     
@@ -132,3 +120,39 @@ class AsteroidCollision_735
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 735. Asteroid Collision
+ *
+ * 1️⃣ What data structure is best suited for this problem and why?
+ *     → Stack is ideal because it allows us to keep track of previous asteroids 
+ *       and resolve collisions in the correct order (LIFO).
+ *
+ * 2️⃣ When does a collision happen between two asteroids?
+ *     → A collision only occurs when a right-moving asteroid (positive) 
+ *       is followed by a left-moving asteroid (negative). 
+ *       Asteroids moving in the same direction will never meet.
+ *
+ * 3️⃣ What is the time and space complexity?
+ *     → Time: O(n), where n is the number of asteroids. Each asteroid is pushed 
+ *       and popped at most once.
+ *     → Space: O(n), for the stack used to store surviving asteroids.
+ *
+ * 4️⃣ How do you handle the case where asteroids are equal in size?
+ *     → Both are destroyed, so we pop the last one from the stack 
+ *       and do not push the current one.
+ *
+ * 5️⃣ Can this be solved without a stack?
+ *     → Yes, technically — by using a list and simulating a stack behavior, 
+ *       but a stack provides a cleaner and more idiomatic solution.
+ *
+ * 6️⃣ What are some important edge cases?
+ *     → - All asteroids are moving in one direction (no collisions).
+ *       - Multiple sequential collisions (e.g., [10, 2, -5]).
+ *       - Asteroids of equal size meeting head-on.
+ *
+ * 7️⃣ What would change if asteroids had variable speeds?
+ *     → The current solution assumes equal speeds. With different speeds, 
+ *       we would need to simulate positions over time — likely needing 
+ *       a priority queue or event-based simulation.
+ ***************************************************************/

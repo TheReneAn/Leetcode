@@ -8,24 +8,32 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/rene/.nuget/packages/": {}
+    "C:\\Users\\ReneHOME\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/Week3_Stack_Assign3.csproj",
+      "projectUniqueName": "E:\\Programming\\Leetcode\\Week3_Stack\\Week3_Stack_Assign3\\Week3_Stack_Assign3.csproj",
       "projectName": "Week3_Stack_Assign3",
-      "projectPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/Week3_Stack_Assign3.csproj",
-      "packagesPath": "/Users/rene/.nuget/packages/",
-      "outputPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week3_Stack/Week3_Stack_Assign3/obj/",
+      "projectPath": "E:\\Programming\\Leetcode\\Week3_Stack\\Week3_Stack_Assign3\\Week3_Stack_Assign3.csproj",
+      "packagesPath": "C:\\Users\\ReneHOME\\.nuget\\packages\\",
+      "outputPath": "E:\\Programming\\Leetcode\\Week3_Stack\\Week3_Stack_Assign3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/rene/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ReneHOME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -43,7 +51,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -64,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/rene/.dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

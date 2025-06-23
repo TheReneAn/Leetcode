@@ -29,7 +29,6 @@
  ***************************************************************/
 
 using System.Diagnostics;
-using System.Reflection;
 
 namespace Week3_Stack_Assign2;
 
@@ -82,3 +81,41 @@ class DailyTemperatures_739
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔎 Interview Questions for LeetCode 739. Daily Temperatures
+ *
+ * 1️⃣ What is the time and space complexity?
+ *     → Time: O(n), Space: O(n)
+ *       Each temperature is pushed and popped from the stack at most once.
+ *
+ * 2️⃣ Why use a stack in this problem?
+ *     → To track the indices of unresolved temperatures in a **monotonic decreasing stack**.
+ *       It helps us find the next warmer day in O(1) amortized time.
+ *
+ * 3️⃣ What kind of stack is used here?
+ *     → A **monotonic stack** (specifically, decreasing),
+ *       meaning temperatures in the stack are in descending order.
+ *       We pop from the stack when a warmer temperature is found.
+ *
+ * 4️⃣ What do we store in the stack — values or indices?
+ *     → We store **indices**, not actual temperature values,
+ *       so we can calculate the number of days to wait using index difference.
+ *
+ * 5️⃣ What happens if no warmer day is found for a given day?
+ *     → We leave `answer[i]` as the default `0`.
+ *       This is correct per problem description.
+ *
+ * 6️⃣ Can we solve this problem with brute force?
+ *     → Yes, but it would take O(n²) time by checking every future day,
+ *       which is inefficient for large inputs.
+ *
+ * 7️⃣ What is a real-world analogy for this problem?
+ *     → Like recording each day's temperature and waiting to see when it gets warmer,
+ *       only resolving it once a warmer day actually arrives.
+ *
+ * 8️⃣ How would you modify the algorithm to return the actual temperature,
+ *     not just the number of days?
+ *     → Instead of `answer[prevIndex] = i - prevIndex;`,
+ *       set `answer[prevIndex] = temperatures[i];`
+ ***************************************************************/
