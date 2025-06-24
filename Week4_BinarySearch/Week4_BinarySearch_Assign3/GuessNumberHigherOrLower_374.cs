@@ -37,12 +37,94 @@
  *   Binary Search, Interactive
  ***************************************************************/
 
-namespace Week4_BinarySearch_Assign3;
+using System.Diagnostics;
 
-class GuessNumberHigherOrLower_374
+namespace Week4_BinarySearch_Assign3
 {
-    static void Main(string[] args)
+    public class GuessNumberHigherOrLower_374 : GuessGame
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            // Simulate: Let's say the picked number is 6
+            Pick = 6;
+
+            MeasureExecutionTime(() =>
+            {
+                var solver = new GuessNumberHigherOrLower_374();
+                var result = solver.GuessNumber(10);
+                Console.WriteLine($"Guessed Number: {result}");
+            });
+        }
+
+        /// <summary>
+        /// Finds the number using binary search by querying guess(int num).
+        /// </summary>
+        private int GuessNumber(int n)
+        {
+            var left = 1;
+            var right = n;
+
+            while (left <= right)
+            {
+                // Avoid overflow by using this formula instead of (left + right) / 2
+                var mid = left + (right - left) / 2;
+
+                var result = Guess(mid); // Simulated API call
+
+                if (result == 0)
+                {
+                    return mid; // Correct guess
+                }
+
+                if (result < 0)
+                {
+                    right = mid - 1; // Guessed number is too high
+                }
+                else
+                {
+                    left = mid + 1; // Guessed number is too low
+                }
+            }
+
+            return -1; // Should not reach here
+        }
+
+        /// <summary>
+        /// Measures and prints the execution time of an action.
+        /// </summary>
+        private static void MeasureExecutionTime(Action action)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            action();
+            stopwatch.Stop();
+            Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
+        }
+    }
+
+    /// <summary>
+    /// Simulated GuessGame base class with a static pick number and guess() API.
+    /// </summary>
+    public class GuessGame
+    {
+        // Static number picked for guessing (in LeetCode, this is hidden)
+        protected static int Pick;
+
+        /// <summary>
+        /// Simulates the LeetCode API which tells whether the guess is too high, low, or correct.
+        /// </summary>
+        protected int Guess(int num)
+        {
+            if (num > Pick)
+            {
+                return -1;
+            }
+
+            if (num < Pick)
+            {
+                return 1;
+            }
+            
+            return 0;
+        }
     }
 }
