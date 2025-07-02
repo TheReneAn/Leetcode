@@ -69,7 +69,6 @@ public class LinkedListCycleII_142
             Console.WriteLine(result != null ? $"Cycle begins at node with value: {result.val}" : "No cycle");
         });
 
-
         // --- Test Case 2: head = [1,2], pos = 0 ---
         var nodeA = new ListNode(1);
         var nodeB = new ListNode(2);
