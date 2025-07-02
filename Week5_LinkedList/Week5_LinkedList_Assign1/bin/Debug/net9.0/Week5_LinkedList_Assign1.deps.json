@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Week5_LinkedList_Assign1/1.0.0": {
+        "runtime": {
+          "Week5_LinkedList_Assign1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week5_LinkedList_Assign1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
