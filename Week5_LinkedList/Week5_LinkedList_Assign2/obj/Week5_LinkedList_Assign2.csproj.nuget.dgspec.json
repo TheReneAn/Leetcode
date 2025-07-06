@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tunce\\Desktop\\Leetcode\\Week5_LinkedList\\Week5_LinkedList_Assign2\\Week5_LinkedList_Assign2.csproj": {}
+    "/Users/rene/Documents/Rene's Workspace/Leetcode/Week5_LinkedList/Week5_LinkedList_Assign2/Week5_LinkedList_Assign2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tunce\\Desktop\\Leetcode\\Week5_LinkedList\\Week5_LinkedList_Assign2\\Week5_LinkedList_Assign2.csproj": {
+    "/Users/rene/Documents/Rene's Workspace/Leetcode/Week5_LinkedList/Week5_LinkedList_Assign2/Week5_LinkedList_Assign2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week5_LinkedList\\Week5_LinkedList_Assign2\\Week5_LinkedList_Assign2.csproj",
+        "projectUniqueName": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week5_LinkedList/Week5_LinkedList_Assign2/Week5_LinkedList_Assign2.csproj",
         "projectName": "Week5_LinkedList_Assign2",
-        "projectPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week5_LinkedList\\Week5_LinkedList_Assign2\\Week5_LinkedList_Assign2.csproj",
-        "packagesPath": "C:\\Users\\tunce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week5_LinkedList\\Week5_LinkedList_Assign2\\obj\\",
+        "projectPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week5_LinkedList/Week5_LinkedList_Assign2/Week5_LinkedList_Assign2.csproj",
+        "packagesPath": "/Users/rene/.nuget/packages/",
+        "outputPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week5_LinkedList/Week5_LinkedList_Assign2/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tunce\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/rene/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/rene/.dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
