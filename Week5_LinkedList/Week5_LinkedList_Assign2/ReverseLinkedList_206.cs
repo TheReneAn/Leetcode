@@ -205,7 +205,7 @@ public class ReverseLinkedList_206
  * 3. Link Reversal: After the sub-problem is solved, the original `head` is attached to the end of the reversed sublist by making its original successor point back to it (`head.next.next = head`).
  *
  * 4️⃣ Which approach is generally preferred and why?
- * → In a production environment, the **iterative** approach is generally preferred.
+ * → In a production environment, the iterative approach is generally preferred.
  * ✅ Its O(1) space complexity is more efficient and avoids the risk of a "stack overflow" error,
  * which can occur with the recursive solution if the linked list is very long.
  *

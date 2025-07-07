@@ -219,7 +219,7 @@ public class MergeTwoSortedLists_21
  * We can simply start appending nodes and return `dummy.next` at the end.
  *
  * 3️⃣ Which approach is generally preferred in an interview: iterative or recursive?
- * → The **iterative** approach is often preferred. Its O(1) space complexity is superior to the recursive solution's O(n + m) space complexity.
+ * → The iterative approach is often preferred. Its O(1) space complexity is superior to the recursive solution's O(n + m) space complexity.
  * This makes it more memory-efficient and safer, as it avoids the risk of a stack overflow error that could occur with very long lists.
  *
  * 4️⃣ What are the key edge cases to consider?
