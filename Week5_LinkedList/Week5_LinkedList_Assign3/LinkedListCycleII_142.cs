@@ -167,19 +167,26 @@ public class LinkedListCycleII_142
  * → Space: O(1) — This is the optimal solution, as it only requires a few pointers, regardless of the list's size.
  *
  * 2️⃣ Can you explain how Floyd's Two-Pointer algorithm works in two phases?
- * → **Phase 1: Detect the Cycle.** A `slow` pointer moves one step at a time, and a `fast` pointer moves two steps. If there's a cycle, they are guaranteed to meet at some node inside the cycle. If the `fast` pointer reaches `null`, there is no cycle.
+ * → Phase 1: Detect the Cycle. A `slow` pointer moves one step at a time, and a `fast` pointer moves two steps.
+ * If there's a cycle, they are guaranteed to meet at some node inside the cycle. If the `fast` pointer reaches `null`, there is no cycle.
  *
- * → **Phase 2: Find the Cycle's Start.** After the pointers meet, reset one pointer to the `head` of the list. Then, move both this pointer and the other pointer (which is still at the meeting point) one step at a time. The node where they meet again is the beginning of the cycle.
+ * → Phase 2: Find the Cycle's Start. After the pointers meet, reset one pointer to the `head` of the list.
+ * Then, move both this pointer and the other pointer (which is still at the meeting point) one step at a time. The node where they meet again is the beginning of the cycle.
  *
  * 3️⃣ Why does the second phase of Floyd's algorithm work?
- * → The key insight is based on the distances traveled. Let `L` be the distance from the head to the cycle start, and `k` be the distance from the cycle start to the meeting point. It can be proven mathematically that `L` is equal to the distance from the meeting point back to the cycle start, moving in the direction of the cycle. Therefore, starting one pointer at the head and another at the meeting point and moving them at the same speed will cause them to collide at the cycle's entrance.
+ * → The key insight is based on the distances traveled. Let `L` be the distance from the head to the cycle start, and `k` be the distance from the cycle start to the meeting point.
+ * It can be proven mathematically that `L` is equal to the distance from the meeting point back to the cycle start, moving in the direction of the cycle.
+ * Therefore, starting one pointer at the head and another at the meeting point and moving them at the same speed will cause them to collide at the cycle's entrance.
  *
  * 4️⃣ Why is the Two-Pointer method preferred over the Hash Table method?
- * → The primary reason is the **O(1) space complexity**. The problem's follow-up explicitly asks for a constant memory solution, making the Two-Pointer algorithm the intended and optimal approach. The Hash Table method, while conceptually simpler, fails this constraint.
+ * → The primary reason is the O(1) space complexity.
+ * The problem's follow-up explicitly asks for a constant memory solution, making the Two-Pointer algorithm the intended and optimal approach.
+ * The Hash Table method, while conceptually simpler, fails this constraint.
  *
  * 5️⃣ What's the main difference between this problem (Cycle II) and Linked List Cycle I?
- * → **Linked List Cycle I** (LeetCode 141) is a simpler decision problem. It only asks *if* a cycle exists (return `true` or `false`). This only requires completing Phase 1 of Floyd's algorithm.
- * → **Linked List Cycle II** (this problem) asks for the *specific node* where the cycle begins, which requires implementing both Phase 1 and the more complex Phase 2.
+ * → Linked List Cycle I (LeetCode 141) is a simpler decision problem. It only asks *if* a cycle exists (return `true` or `false`).
+ * This only requires completing Phase 1 of Floyd's algorithm.
+ * → Linked List Cycle II (this problem) asks for the *specific node* where the cycle begins, which requires implementing both Phase 1 and the more complex Phase 2.
  *
  * 6️⃣ What are some important edge cases to consider?
  * → An empty list (`head == null`).

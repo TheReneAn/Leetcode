@@ -36,9 +36,63 @@ public class MaximumDepthOfBinaryTree_104
 
     }
 
+    public int MaxDepth_RecursiveVersion(TreeNode root)
+    {
+        // Base case: if the node is null, the depth is 0
+        if (root == null)
+        {
+            return 0;
+        }
+
+        // Recursively calculate the depth of left and right subtrees
+        var leftDepth = MaxDepth_RecursiveVersion(root.left);
+        var rightDepth = MaxDepth_RecursiveVersion(root.right);
+
+        // The depth of the current node is 1 (itself) + the max of its subtrees
+        return 1 + Math.Max(leftDepth, rightDepth);
+    }
+    
     public int MaxDepth(TreeNode root)
     {
-        return 0;
+        // If the tree is empty, its depth is 0
+        if (root == null)
+        {
+            return 0;
+        }
+
+        // Initialize a queue for level-order traversal
+        var queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        var depth = 0;
+
+        // Traverse the tree level by level
+        while (queue.Count > 0)
+        {
+            var levelSize = queue.Count; // Number of nodes at current level
+
+            // Process all nodes at the current level
+            for (var i = 0; i < levelSize; i++)
+            {
+                var current = queue.Dequeue();
+
+                // Add child nodes to the queue for the next level
+                if (current.left != null)
+                {
+                    queue.Enqueue(current.left);
+                }
+
+                if (current.right != null)
+                {
+                    queue.Enqueue(current.right);
+                }
+            }
+
+            // After processing one level, increase depth by 1
+            depth++;
+        }
+
+        return depth;
     }
 
     /// <summary>
@@ -66,3 +120,99 @@ public class MaximumDepthOfBinaryTree_104
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔷 Interview Questions for LeetCode 104. Maximum Depth of Binary Tree
+ *
+ * 1️⃣ What is the time and space complexity of your solution?
+ *     🔸 Recursive DFS:
+ *         → Time: O(n) — Every node is visited once.
+ *         → Space: O(h) — h is the height of the tree (due to recursion stack).
+ *
+ *     🔹 Iterative BFS:
+ *         → Time: O(n) — Every node is added to and removed from the queue once.
+ *         → Space: O(w) — w is the maximum width of the tree (nodes at the widest level).
+ *
+ * 2️⃣ Why does DFS work well for this problem?
+ *     → DFS allows us to go as deep as possible into each branch,
+ *       which directly matches the goal of finding the maximum depth.
+ *       We compare the depths from the left and right subtrees recursively.
+ *
+ * 3️⃣ How does the base case in recursion work?
+ *     → If the node is null, it means we've gone beyond a leaf,
+ *       so we return a depth of 0. This terminates the recursion.
+ *
+ * 4️⃣ When would BFS be preferred over DFS?
+ *     → BFS might be preferred when we want to process nodes level-by-level,
+ *       or if we want to avoid recursion due to potential stack overflow in deep trees.
+ *
+ * 5️⃣ Can you explain the BFS approach?
+ *     → We use a queue to perform level-order traversal.
+ *       For each level, we count the number of nodes and process them,
+ *       incrementing the depth after each level is completed.
+ *
+ * 6️⃣ What are some edge cases to consider?
+ *     → Empty tree (root is null): return 0
+ *       Tree with one node: return 1
+ *       Left- or right-skewed trees (linked list-shaped)
+ *
+ *
+ * 7️⃣ What is the difference between depth and height of a tree?
+ *     → They are often used interchangeably.
+ *       In this problem, “maximum depth” refers to the longest path from the root down to any leaf.
+ ***************************************************************/
+ 
+/***************************************************************
+ * 🔍 DFS (Depth-First Search)
+ * - Explores as deep as possible down each branch before backtracking.
+ * - Usually implemented using recursion or a stack.
+ * - Well-suited for problems like computing maximum depth, finding paths, etc.
+ *
+ * Example:
+ * int MaxDepth(TreeNode root)
+ * {
+ *     if (root == null) return 0;
+ *     int left = MaxDepth(root.left);
+ *     int right = MaxDepth(root.right);
+ *     return Math.Max(left, right) + 1;
+ * }
+ *
+ * 🔍 BFS (Breadth-First Search)
+ * - Explores all nodes at the current depth level before moving to the next level.
+ * - Typically implemented using a queue.
+ * - Ideal for level-order traversal and finding shortest paths.
+ *
+ * Example:
+ * int MaxDepth(TreeNode root)
+ * {
+ *     if (root == null) return 0;
+ *     Queue<TreeNode> queue = new Queue<TreeNode>();
+ *     queue.Enqueue(root);
+ *     int depth = 0;
+ *
+ *     while (queue.Count > 0)
+ *     {
+ *         int size = queue.Count;
+ *         for (int i = 0; i < size; i++) {
+ *             TreeNode node = queue.Dequeue();
+ *             if (node.left != null) queue.Enqueue(node.left);
+ *             if (node.right != null) queue.Enqueue(node.right);
+ *         }
+ *         depth++;
+ *     }
+ *
+ *     return depth;
+ * }
+ *
+ * 🎯 Summary:
+ * DFS:
+ *   → Uses recursion or stack.
+ *   → Goes deep first, then backtracks.
+ *   → Space: O(h), Time: O(n)
+ *
+ * BFS:
+ *   → Uses a queue.
+ *   → Processes nodes level by level.
+ *   → Space: O(w), Time: O(n)
+ *   (h: height of tree, w: max width of tree, n: total nodes)
+ ***************************************************************/
