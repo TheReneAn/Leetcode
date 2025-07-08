@@ -1,0 +1,15 @@
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\bin\Debug\net9.0\Week6_Trees_Assign1.exe
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\bin\Debug\net9.0\Week6_Trees_Assign1.deps.json
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\bin\Debug\net9.0\Week6_Trees_Assign1.runtimeconfig.json
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\bin\Debug\net9.0\Week6_Trees_Assign1.dll
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\bin\Debug\net9.0\Week6_Trees_Assign1.pdb
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.AssemblyInfoInputs.cache
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.AssemblyInfo.cs
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.csproj.CoreCompileInputs.cache
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.sourcelink.json
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.dll
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\refint\Week6_Trees_Assign1.dll
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.pdb
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\Week6_Trees_Assign1.genruntimeconfig.cache
+E:\Programming\Leetcode\Week6_Trees\Week6_Trees_Assign1\obj\Debug\net9.0\ref\Week6_Trees_Assign1.dll
