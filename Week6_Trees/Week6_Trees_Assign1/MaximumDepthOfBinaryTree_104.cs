@@ -28,8 +28,8 @@
 using System.Diagnostics;
 
 namespace Week6_Trees_Assign1;
-public class MaximumDepthOfBinaryTree_104
 
+public class MaximumDepthOfBinaryTree_104
 {
     private static void Main()
     {

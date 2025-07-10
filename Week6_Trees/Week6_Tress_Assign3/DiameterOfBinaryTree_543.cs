@@ -36,12 +36,48 @@ public class DiameterOfBinaryTree_543
 {
     private static void Main()
     {
+        var tree = new TreeNode(1,
+            new TreeNode(2,
+                new TreeNode(4),
+                new TreeNode(5)
+            ),
+            new TreeNode(3)
+        );
 
+        var solution = new DiameterOfBinaryTree_543();
+
+        MeasureExecutionTime(() =>
+        {
+            int result = solution.DiameterOfBinaryTree(tree);
+            Console.WriteLine($"Diameter of Binary Tree: {result}");
+        });
     }
     
+    private int _maxDiameter; // Tracks the maximum diameter found
+
     public int DiameterOfBinaryTree(TreeNode root)
     {
-        return 0;
+        // Start DFS traversal to calculate diameter
+        Depth(root);
+        return _maxDiameter;
+    }
+
+    // Helper function that returns the height of the current node
+    private int Depth(TreeNode node)
+    {
+        if (node == null)
+        {
+            return 0;
+        }
+
+        var left = Depth(node.left);   // Height of left subtree
+        var right = Depth(node.right); // Height of right subtree
+
+        // Diameter at current node = left height + right height
+        _maxDiameter = Math.Max(_maxDiameter, left + right);
+
+        // Return height of this node
+        return Math.Max(left, right) + 1;
     }
     
     /// <summary>
