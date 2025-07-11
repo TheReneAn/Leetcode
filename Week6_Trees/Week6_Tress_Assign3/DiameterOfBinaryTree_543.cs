@@ -105,3 +105,29 @@ public class DiameterOfBinaryTree_543
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔍 Interview Questions for LeetCode 543 – Diameter of Binary Tree
+ *
+ * 1️⃣ What is the definition of the "diameter" of a binary tree?
+ *     - Answer: It's the number of edges in the longest path between any two nodes in the tree.
+ *
+ * 2️⃣ Does the longest path (diameter) always pass through the root?
+ *     - Answer: No. It may or may not pass through the root.
+ *
+ * 3️⃣ What is the time and space complexity of your solution?
+ *     - Time Complexity: O(n), where n is the number of nodes.
+ *     - Space Complexity: O(h), where h is the height of the tree (due to recursion stack).
+ *
+ * 4️⃣ Why is DFS a good choice for solving this problem?
+ *     - Answer: DFS allows us to explore the depth of each subtree to compute heights and compare combined depths efficiently during post-order traversal.
+ *
+ * 5️⃣ Could you solve this using BFS?
+ *     - Answer: It is possible but not straightforward. BFS is better suited for level-order traversal, not depth comparisons needed here.
+ *
+ * 6️⃣ How would the algorithm change if the diameter was defined in terms of number of nodes, not edges?
+ *     - Answer: Instead of `left + right`, the formula becomes `left + right + 1`, and we return `max - 1` if edges are required at the end.
+ *
+ * 7️⃣ Can this problem be solved iteratively?
+ *     - Answer: It is difficult to compute subtree heights iteratively while tracking diameter efficiently. Recursion (DFS) is much more intuitive.
+ ***************************************************************/
