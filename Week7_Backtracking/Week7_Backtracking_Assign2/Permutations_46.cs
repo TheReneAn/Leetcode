@@ -142,3 +142,33 @@ public class Subsets_78
         Console.WriteLine($"Execution Time: {stopwatch.Elapsed.TotalMilliseconds} ms\n");
     }
 }
+
+/***************************************************************
+ * 🔍 Interview Questions for LeetCode 46 – Permutations
+ *
+ * 1️⃣ What algorithm(s) can be used to solve this?
+ *     - Answer: Backtracking (with used[] array) and Swap-based in-place backtracking.
+ *
+ * 2️⃣ What is the time and space complexity of your solution?
+ *     - Time Complexity: O(n × n!), where n is the length of the input array.
+ *     - Space Complexity: O(n) for recursion stack, plus O(n!) for storing results.
+ *
+ * 3️⃣ Why is backtracking a good choice for this problem?
+ *     - Answer: It allows building up permutations step-by-step and efficiently pruning paths with already used elements.
+ *
+ * 4️⃣ How does the swap-based approach work?
+ *     - Answer: It recursively fixes one element at a time by swapping it with all possible candidates ahead,
+ *       and backtracks by swapping back to preserve the original array.
+ *
+ * 5️⃣ Which is more efficient: backtracking with used[] or swapping?
+ *     - Answer:
+ *         • Swap-based is more memory efficient (in-place).
+ *         • used[] version is more intuitive and avoids modifying the input.
+ *         ✅ Use whichever fits the interview style or project requirement best.
+ *
+ * 6️⃣ Can this problem be solved iteratively?
+ *     - Answer: It’s complex to implement iteratively and not commonly done. Recursive backtracking is the standard approach.
+ *
+ * 7️⃣ What constraints make this problem feasible?
+ *     - Answer: The input length is small (n ≤ 6), so generating all n! permutations (max 720) is computationally reasonable.
+ ***************************************************************/

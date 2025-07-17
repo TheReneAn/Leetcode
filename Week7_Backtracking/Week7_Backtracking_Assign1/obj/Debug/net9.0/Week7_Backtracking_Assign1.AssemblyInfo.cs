@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Week7_Backtracking_Assign1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1116d6c1b58548d20d4e0ff4c53567325fd8fa0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca07993ccabaf0082b696c5dd257c6300037506d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Week7_Backtracking_Assign1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Week7_Backtracking_Assign1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

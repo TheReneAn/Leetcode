@@ -37,7 +37,7 @@ public class Subsets_78
     {
         var instance = new Subsets_78();
 
-        int[] nums = { 1, 2, 3 };  // Example input
+        int[] nums = [1, 2, 3];  // Example input
 
         Console.WriteLine("🔁 Generating Subsets using Backtracking:");
         MeasureExecutionTime(() =>
@@ -84,7 +84,7 @@ public class Subsets_78
             // Explore further subsets
             for (var i = start; i < nums.Length; i++)
             {
-                current.Add(nums[i]);                   // Include nums[i]
+                current.Add(nums[i]);                        // Include nums[i]
                 Backtrack(i + 1, current);              // Recurse with next index
                 current.RemoveAt(current.Count - 1);    // Backtrack
             }
