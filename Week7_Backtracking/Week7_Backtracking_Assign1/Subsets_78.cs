@@ -68,25 +68,29 @@ public class Subsets_78
 
         Console.WriteLine($"\nTotal subsets: {subsets.Count}\n");
     }
-
+    
     private IList<IList<int>> Subsets_Backtracking(int[] nums)
     {
         var result = new List<IList<int>>();
         Backtrack(0, new List<int>());
         return result;
-        
-        // Helper Method
+
         void Backtrack(int start, List<int> current)
         {
-            // Add a copy of current subset
-            result.Add(new List<int>(current)); 
+            // ✅ Base Case: Add a snapshot of the current subset
+            result.Add(new List<int>(current));
 
-            // Explore further subsets
+            // 🔁 Explore all options from the current state
             for (var i = start; i < nums.Length; i++)
             {
-                current.Add(nums[i]);                        // Include nums[i]
-                Backtrack(i + 1, current);              // Recurse with next index
-                current.RemoveAt(current.Count - 1);    // Backtrack
+                // ➕ Choose nums[i] and add to the current subset
+                current.Add(nums[i]);
+
+                // 🔁 Explore further(Recurse): move to the next index
+                Backtrack(i + 1, current);
+
+                // ↩️ Un-choose (Backtrack):: remove last added element
+                current.RemoveAt(current.Count - 1);
             }
         }
     }

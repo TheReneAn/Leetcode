@@ -8,24 +8,32 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/rene/.nuget/packages/": {}
+    "C:\\Users\\tunce\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week7_Backtracking/Week7_Backtracking_Assign3/Week7_Backtracking_Assign3.csproj",
+      "projectUniqueName": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week7_Backtracking\\Week7_Backtracking_Assign3\\Week7_Backtracking_Assign3.csproj",
       "projectName": "Week7_Backtracking_Assign3",
-      "projectPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week7_Backtracking/Week7_Backtracking_Assign3/Week7_Backtracking_Assign3.csproj",
-      "packagesPath": "/Users/rene/.nuget/packages/",
-      "outputPath": "/Users/rene/Documents/Rene's Workspace/Leetcode/Week7_Backtracking/Week7_Backtracking_Assign3/obj/",
+      "projectPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week7_Backtracking\\Week7_Backtracking_Assign3\\Week7_Backtracking_Assign3.csproj",
+      "packagesPath": "C:\\Users\\tunce\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tunce\\Desktop\\Leetcode\\Week7_Backtracking\\Week7_Backtracking_Assign3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/rene/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\tunce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/rene/.dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

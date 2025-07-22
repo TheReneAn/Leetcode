@@ -70,37 +70,39 @@ public class Subsets_78
     private IList<IList<int>> Permute_Backtracking(int[] nums)
     {
         var result = new List<IList<int>>();
-        var used = new bool[nums.Length]; // Tracks which elements are used in the current path
+        var used = new bool[nums.Length]; // Tracks whether each element is used in the current permutation
 
+        // 🔁 Start backtracking with an empty path
+        Backtrack(new List<int>());
+        return result;
+
+        // 🔁 Recursive backtracking function
         void Backtrack(List<int> current)
         {
-            // If current permutation is complete, add a copy to result
+            // ✅ Base case: if the current permutation is complete
             if (current.Count == nums.Length)
             {
-                result.Add(new List<int>(current));
+                result.Add(new List<int>(current)); // Add a snapshot of the current permutation
                 return;
             }
 
-            // Explore unused elements
+            // 🔁 Explore: Try each unused number at this position
             for (var i = 0; i < nums.Length; i++)
             {
-                if (used[i]) continue; // Skip if already used
+                if (used[i]) continue; // 🚫 Skip if already used
 
-                // Choose
+                // ➕ Choose: mark as used and add to the current path
                 used[i] = true;
                 current.Add(nums[i]);
 
-                // Explore
+                // 🔁 Explore further(Recurse): Recurse to build the rest of the permutation
                 Backtrack(current);
 
-                // Un-choose (backtrack)
+                // ↩️ Un-choose (Backtrack): remove the last element and mark unused
                 current.RemoveAt(current.Count - 1);
                 used[i] = false;
             }
         }
-
-        Backtrack(new List<int>());
-        return result;
     }
 
     private IList<IList<int>> Permute_Swapping(int[] nums)
