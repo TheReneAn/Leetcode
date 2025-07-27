@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week8_HeapPriorityQueue_Assign1", "Week8_HeapPriorityQueue_Assign1\Week8_HeapPriorityQueue_Assign1.csproj", "{DADD6836-8A5E-4C50-AE63-00C830688043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week8_HeapPriorityQueue_Assign2", "Week8_HeapPriorityQueue_Assign2\Week8_HeapPriorityQueue_Assign2.csproj", "{FDE68622-8478-4F6D-8260-604C0C692E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week8_HeapPriorityQueue_Assign3", "Week8_HeapPriorityQueue_Assign3\Week8_HeapPriorityQueue_Assign3.csproj", "{472F7337-CBA6-4A22-874D-F51BEC9E2E12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DADD6836-8A5E-4C50-AE63-00C830688043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADD6836-8A5E-4C50-AE63-00C830688043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADD6836-8A5E-4C50-AE63-00C830688043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADD6836-8A5E-4C50-AE63-00C830688043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE68622-8478-4F6D-8260-604C0C692E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE68622-8478-4F6D-8260-604C0C692E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE68622-8478-4F6D-8260-604C0C692E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE68622-8478-4F6D-8260-604C0C692E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472F7337-CBA6-4A22-874D-F51BEC9E2E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472F7337-CBA6-4A22-874D-F51BEC9E2E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472F7337-CBA6-4A22-874D-F51BEC9E2E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472F7337-CBA6-4A22-874D-F51BEC9E2E12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
